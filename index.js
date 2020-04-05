@@ -5,20 +5,22 @@ const pluginStealth = require("puppeteer-extra-plugin-stealth");
 
 puppeteer.use(pluginStealth());
 
-class Signer {
-  userAgent =
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36";
-  args = [
-    "--no-sandbox",
-    "--disable-setuid-sandbox",
-    "--disable-infobars",
-    "--window-position=0,0",
-    "--ignore-certifcate-errors",
-    "--ignore-certifcate-errors-spki-list",
-    "--host-rules=MAP tiktok.com 127.0.0.1"
-  ];
 
+
+class Signer {
   constructor(userAgent, tac) {
+    this.userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36";
+
+    this.args = [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-infobars",
+      "--window-position=0,0",
+      "--ignore-certifcate-errors",
+      "--ignore-certifcate-errors-spki-list",
+      "--host-rules=MAP tiktok.com 127.0.0.1"
+    ];
+
     if (userAgent) {
       this.userAgent = userAgent;
     }
