@@ -1,4 +1,5 @@
 TikTok Signature API
+--------------------
 
 TikTok signed request signature calculator API.
 
@@ -35,7 +36,7 @@ curl --location --request POST 'http://IP_SERVER:9999/sign' \
 }'
 ```
 
-## Sample NodeJs
+## NodeJs
 ```
 const rp = require('request-promise');
 
@@ -57,5 +58,6 @@ const calculateSignature =  async (url) => {
 
 It's very important that the userAgent be the same when generate and when request for response.
 ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36")
+
 ---
 
